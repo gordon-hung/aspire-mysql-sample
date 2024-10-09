@@ -1,0 +1,6 @@
+@Aspire.MySQLSample.RESTful_HostAddress = http://localhost:5179
+
+GET {{Aspire.MySQLSample.RESTful_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
