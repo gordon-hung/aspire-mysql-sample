@@ -3,7 +3,7 @@ using System.Net.Sockets;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Aspire.MySQLSample.RESTful.Controllers;
+namespace Aspire.MySQLSample.AppDataMigration.Controllers;
 
 [Route("[controller]")]
 [ApiController]

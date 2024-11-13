@@ -1,6 +1,6 @@
 ﻿using Aspire.MySQLSample.Core.Enums;
 
-namespace Aspire.MySQLSample.RESTful.ViewModels;
+namespace Aspire.MySQLSample.AppRESTful.ViewModels;
 
 public record UserInfoViewModel(
 	string Id,

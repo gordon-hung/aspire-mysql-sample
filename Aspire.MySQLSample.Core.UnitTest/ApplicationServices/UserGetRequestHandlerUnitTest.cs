@@ -5,14 +5,14 @@ using NSubstitute;
 
 namespace Aspire.MySQLSample.Core.UnitTest.ApplicationServices;
 
-public class UserGetByIdRequestHandlerUnitTest
+public class UserGetRequestHandlerUnitTest
 {
 	[Fact]
 	public async Task Normal_Process()
 	{
 		var fakeRepository = Substitute.For<IUserRepository>();
 
-		var request = new UserGetByIdRequest(
+		var request = new UserGetRequest(
 			Id: "4uo9qvf7jdpe");
 
 		var info = new UserInfo(
@@ -22,12 +22,12 @@ public class UserGetByIdRequestHandlerUnitTest
 			State: UserState.Enable,
 			CreatedAt: DateTimeOffset.UtcNow,
 			UpdateAt: DateTimeOffset.UtcNow);
-		_ = fakeRepository.GetByIdAsync(
+		_ = fakeRepository.GetAsync(
 			id: Arg.Is(request.Id.ToLower()),
 			cancellationToken: Arg.Any<CancellationToken>())
 			.Returns(info);
 
-		var sut = new UserGetByIdRequestHandler(
+		var sut = new UserGetRequestHandler(
 			fakeRepository);
 
 		var cancellationTokenSource = new CancellationTokenSource();

@@ -1,0 +1,6 @@
+@Aspire.MySQLSample.AppDataMigration_HostAddress = http://localhost:5043
+
+GET {{Aspire.MySQLSample.AppDataMigration_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

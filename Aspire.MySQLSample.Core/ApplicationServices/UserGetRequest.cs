@@ -2,5 +2,5 @@
 using Aspire.MySQLSample.Core.ApplicationServices;
 
 namespace Aspire.MySQLSample.Core.ApplicationServices;
-public record UserGetByIdRequest(
+public record UserGetRequest(
 	string Id) : IRequest<UserInfoResponse?>;

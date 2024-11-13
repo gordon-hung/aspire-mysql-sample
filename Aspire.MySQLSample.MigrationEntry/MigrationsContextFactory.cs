@@ -19,10 +19,10 @@ public class MigrationsContextFactory : IDesignTimeDbContextFactory<MySqlContext
 				.AddDbContext<MySqlContext>(
 				dbOptions => dbOptions
 				.UseMySql(
-					connectionString: "Server=localhost;Database=sample;Uid=root;Pwd=1qaz2wsx!@;",
+					connectionString: services.BuildServiceProvider().GetRequiredService<IConfiguration>().GetConnectionString("mysql"),
 					serverVersion: new MySqlServerVersion(new Version(9, 0, 0)),
 					mySqlOptionsAction: option => option
-					//.MigrationsHistoryTable("__migrations_history")
+					.MigrationsHistoryTable("__migrations_history")
 					.MigrationsAssembly("Aspire.MySQLSample.MigrationEntry"))))
 			.Build();
 

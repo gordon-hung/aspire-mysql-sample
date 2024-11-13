@@ -5,11 +5,11 @@ namespace Aspire.MySQLSample.Repositories;
 internal class UserIdGenerator(
 	TimeProvider timeProvider) : IUserIdGenerator
 {
-	private static object instance = new object();
+	private static readonly object _Instance = new();
 
 	public string NewId()
 	{
-		lock (instance)
+		lock (_Instance)
 		{
 			Thread.Sleep(1);
 			long ticks = timeProvider.GetUtcNow().Ticks;
@@ -33,7 +33,7 @@ internal class UserIdGenerator(
 		{
 			r = num % nbase;
 			newNumber = chars[(int)r] + newNumber;
-			num = num / nbase;
+			num /= nbase;
 		}
 		// the last number to convert
 		newNumber = chars[(int)num] + newNumber;

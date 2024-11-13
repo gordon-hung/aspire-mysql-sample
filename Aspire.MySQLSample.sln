@@ -6,15 +6,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.AppHost"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.ServiceDefaults", "Aspire.MySQLSample.ServiceDefaults\Aspire.MySQLSample.ServiceDefaults.csproj", "{769E2B5A-DFEC-4C9C-AD3F-A5587D72E5F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.RESTful", "Aspire.MySQLSample.RESTful\Aspire.MySQLSample.RESTful.csproj", "{10546AE6-5556-471A-B579-3975BEF2B9E6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.MigrationEntry", "Aspire.MySQLSample.MigrationEntry\Aspire.MySQLSample.MigrationEntry.csproj", "{C12E93BC-9D65-4C51-BC6F-AC3E78CFAE49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.MySQLSample.Core", "Aspire.MySQLSample.Core\Aspire.MySQLSample.Core.csproj", "{9DC8EA7A-8B09-4858-AEF1-B8C89675EFE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.Core", "Aspire.MySQLSample.Core\Aspire.MySQLSample.Core.csproj", "{9DC8EA7A-8B09-4858-AEF1-B8C89675EFE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.MySQLSample.Repositories", "Aspire.MySQLSample.Repositories\Aspire.MySQLSample.Repositories.csproj", "{C2408A16-2828-4254-AD90-4FAB13948497}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.Repositories", "Aspire.MySQLSample.Repositories\Aspire.MySQLSample.Repositories.csproj", "{C2408A16-2828-4254-AD90-4FAB13948497}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.MySQLSample.Core.UnitTest", "Aspire.MySQLSample.Core.UnitTest\Aspire.MySQLSample.Core.UnitTest.csproj", "{F4B1EF98-D552-4A65-8A0F-6356C7971E24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.Core.UnitTest", "Aspire.MySQLSample.Core.UnitTest\Aspire.MySQLSample.Core.UnitTest.csproj", "{F4B1EF98-D552-4A65-8A0F-6356C7971E24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.AppRESTful", "Aspire.MySQLSample.AppRESTful\Aspire.MySQLSample.AppRESTful.csproj", "{0027036B-7533-4FEC-9F20-8D43078F279B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.MySQLSample.Repositories.UnitTest", "Aspire.MySQLSample.Repositories.UnitTest\Aspire.MySQLSample.Repositories.UnitTest.csproj", "{2A8945EB-C073-498D-B237-0B9C769CD393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire.MySQLSample.IntegrationTest", "Aspire.MySQLSample.IntegrationTest\Aspire.MySQLSample.IntegrationTest.csproj", "{B5A768F5-55EC-41AE-9562-73999069A098}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.AppDataMigration", "Aspire.MySQLSample.AppDataMigration\Aspire.MySQLSample.AppDataMigration.csproj", "{276D45F5-D3DE-45AF-A42F-26B61A064B10}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspire.MySQLSample.AppDataSeeding", "Aspire.MySQLSample.AppDataSeeding\Aspire.MySQLSample.AppDataSeeding.csproj", "{6EFB4DC6-5639-4F40-99D3-DED79E0C394D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +38,6 @@ Global
 		{769E2B5A-DFEC-4C9C-AD3F-A5587D72E5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{769E2B5A-DFEC-4C9C-AD3F-A5587D72E5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{769E2B5A-DFEC-4C9C-AD3F-A5587D72E5F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10546AE6-5556-471A-B579-3975BEF2B9E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10546AE6-5556-471A-B579-3975BEF2B9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10546AE6-5556-471A-B579-3975BEF2B9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10546AE6-5556-471A-B579-3975BEF2B9E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C12E93BC-9D65-4C51-BC6F-AC3E78CFAE49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C12E93BC-9D65-4C51-BC6F-AC3E78CFAE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C12E93BC-9D65-4C51-BC6F-AC3E78CFAE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -50,6 +54,26 @@ Global
 		{F4B1EF98-D552-4A65-8A0F-6356C7971E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4B1EF98-D552-4A65-8A0F-6356C7971E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4B1EF98-D552-4A65-8A0F-6356C7971E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0027036B-7533-4FEC-9F20-8D43078F279B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0027036B-7533-4FEC-9F20-8D43078F279B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0027036B-7533-4FEC-9F20-8D43078F279B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0027036B-7533-4FEC-9F20-8D43078F279B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A8945EB-C073-498D-B237-0B9C769CD393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8945EB-C073-498D-B237-0B9C769CD393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8945EB-C073-498D-B237-0B9C769CD393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8945EB-C073-498D-B237-0B9C769CD393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A768F5-55EC-41AE-9562-73999069A098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A768F5-55EC-41AE-9562-73999069A098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A768F5-55EC-41AE-9562-73999069A098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A768F5-55EC-41AE-9562-73999069A098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{276D45F5-D3DE-45AF-A42F-26B61A064B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276D45F5-D3DE-45AF-A42F-26B61A064B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276D45F5-D3DE-45AF-A42F-26B61A064B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276D45F5-D3DE-45AF-A42F-26B61A064B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EFB4DC6-5639-4F40-99D3-DED79E0C394D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EFB4DC6-5639-4F40-99D3-DED79E0C394D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EFB4DC6-5639-4F40-99D3-DED79E0C394D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EFB4DC6-5639-4F40-99D3-DED79E0C394D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

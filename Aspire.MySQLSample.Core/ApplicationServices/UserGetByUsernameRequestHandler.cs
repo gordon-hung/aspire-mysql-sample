@@ -9,7 +9,7 @@ internal class UserGetByUsernameRequestHandler(
 {
 	public async Task<UserInfoResponse?> Handle(UserGetByUsernameRequest request, CancellationToken cancellationToken)
 	{
-		var info = await repository.GetByUsernameAsync(request.Username.ToLower(), cancellationToken).ConfigureAwait(false);
+		var info = await repository.GetByUsernameAsync(request.Username, cancellationToken).ConfigureAwait(false);
 
 		return info is null
 			? null

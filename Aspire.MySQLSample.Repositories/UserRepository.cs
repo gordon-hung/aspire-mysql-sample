@@ -27,7 +27,7 @@ internal class UserRepository(
 		await context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 	}
 
-	public async ValueTask<UserInfo?> GetByIdAsync(string id, CancellationToken cancellationToken = default)
+	public async ValueTask<UserInfo?> GetAsync(string id, CancellationToken cancellationToken = default)
 	=> await context.Users
 		.Where(u => u.Id == id)
 		.Select(u => new UserInfo(

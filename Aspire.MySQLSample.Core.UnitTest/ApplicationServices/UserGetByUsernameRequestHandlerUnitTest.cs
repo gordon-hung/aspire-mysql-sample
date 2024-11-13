@@ -23,7 +23,7 @@ public class UserGetByUsernameRequestHandlerUnitTest
 			CreatedAt: DateTimeOffset.UtcNow,
 			UpdateAt: DateTimeOffset.UtcNow);
 		_ = fakeRepository.GetByUsernameAsync(
-			username: Arg.Is(request.Username.ToLower()),
+			username: Arg.Is(request.Username),
 			cancellationToken: Arg.Any<CancellationToken>())
 			.Returns(info);
 

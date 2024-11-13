@@ -8,7 +8,7 @@ public interface IUserRepository
 
 	ValueTask<UserInfo?> GetByUsernameAsync(string username, CancellationToken cancellationToken = default);
 
-	ValueTask<UserInfo?> GetByIdAsync(string id, CancellationToken cancellationToken = default);
+	ValueTask<UserInfo?> GetAsync(string id, CancellationToken cancellationToken = default);
 
 	ValueTask UpdatePasswordAsync(string id, string hashedPassword, CancellationToken cancellationToken = default);
 }

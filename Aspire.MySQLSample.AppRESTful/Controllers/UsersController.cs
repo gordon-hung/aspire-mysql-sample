@@ -1,29 +1,18 @@
-﻿using Aspire.MySQLSample.Core;
+﻿using Aspire.MySQLSample.AppRESTful.ViewModels;
+
+using Aspire.MySQLSample.Core;
 
 using Aspire.MySQLSample.Core.ApplicationServices;
-using Aspire.MySQLSample.RESTful.ViewModels;
 
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Aspire.MySQLSample.RESTful.Controllers;
+namespace Aspire.MySQLSample.AppRESTful.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
 public class UsersController : ControllerBase
 {
-	/// <summary>
-	/// Creates new id.
-	/// </summary>
-	/// <param name="userIdGenerator">The user identifier generator.</param>
-	/// <returns></returns>
-	[HttpGet("new-id")]
-	public ValueTask<string> NewId(
-		[FromServices] IUserIdGenerator userIdGenerator)
-	{
-		return ValueTask.FromResult(userIdGenerator.NewId());
-	}
-
 	/// <summary>
 	/// Users the add asynchronous.
 	/// </summary>
@@ -42,18 +31,18 @@ public class UsersController : ControllerBase
 		.ConfigureAwait(false);
 
 	/// <summary>
-	/// Users the get by identifier asynchronous.
+	/// Users the get asynchronous.
 	/// </summary>
 	/// <param name="mediator">The mediator.</param>
 	/// <param name="id">The identifier.</param>
 	/// <returns></returns>
-	[HttpGet("{id}/id")]
-	public async ValueTask<UserInfoViewModel?> UserGetByIdAsync(
+	[HttpGet("{id}")]
+	public async ValueTask<UserInfoViewModel?> UserGetAsync(
 		[FromServices] IMediator mediator,
 		string id)
 	{
 		var response = await mediator.Send(
-			request: new UserGetByIdRequest(Id: id),
+			request: new UserGetRequest(Id: id),
 			cancellationToken: HttpContext.RequestAborted)
 			.ConfigureAwait(false);
 
@@ -67,10 +56,16 @@ public class UsersController : ControllerBase
 				response.UpdateAt);
 	}
 
+	/// <summary>
+	/// Users the get by username asynchronous.
+	/// </summary>
+	/// <param name="mediator">The mediator.</param>
+	/// <param name="username">The username.</param>
+	/// <returns></returns>
 	[HttpGet("{username}/username")]
 	public async ValueTask<UserInfoViewModel?> UserGetByUsernameAsync(
 		[FromServices] IMediator mediator,
-		string username = "Gordon_Hung")
+		string username = "gordon.hung")
 	{
 		var response = await mediator.Send(
 			request: new UserGetByUsernameRequest(Username: username),

@@ -15,7 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aspire.MySQLSample.RESTful\Aspire.MySQLSample.RESTful.csproj" />
+    <ProjectReference Include="..\Aspire.MySQLSample.AppDataMigration\Aspire.MySQLSample.AppDataMigration.csproj" />
+    <ProjectReference Include="..\Aspire.MySQLSample.AppDataSeeding\Aspire.MySQLSample.AppDataSeeding.csproj" />
+    <ProjectReference Include="..\Aspire.MySQLSample.AppRESTful\Aspire.MySQLSample.AppRESTful.csproj" />
   </ItemGroup>
 
 </Project>

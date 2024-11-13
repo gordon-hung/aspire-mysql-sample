@@ -16,7 +16,7 @@ internal class UserAddRequestHandler(
 
 		await repository.AddAsync(
 			id: id,
-			username: request.Username.ToLower(),
+			username: request.Username,
 			hashedPassword: hashedPassword,
 			cancellationToken: cancellationToken)
 			.ConfigureAwait(false);

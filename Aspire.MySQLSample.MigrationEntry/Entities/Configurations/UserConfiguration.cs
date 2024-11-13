@@ -22,8 +22,9 @@ namespace Aspire.MySQLSample.MigrationEntry.Entities.Configurations
             entity.Property(e => e.Id)
                 .HasMaxLength(16)
                 .HasComment("識別碼")
-                .HasColumnName("id");
-            entity.Property(e => e.CreatedAt)
+                .HasColumnName("id")
+				.UseCollation("utf8mb4_general_ci");
+			entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasComment("創建時間")
                 .HasColumnType("timestamp")
@@ -43,9 +44,10 @@ namespace Aspire.MySQLSample.MigrationEntry.Entities.Configurations
             entity.Property(e => e.Username)
                 .HasMaxLength(32)
                 .HasComment("用戶名")
-                .HasColumnName("username");
+                .HasColumnName("username")
+				.UseCollation("utf8mb4_general_ci");
 
-            OnConfigurePartial(entity);
+			OnConfigurePartial(entity);
         }
 
         partial void OnConfigurePartial(EntityTypeBuilder<User> entity);

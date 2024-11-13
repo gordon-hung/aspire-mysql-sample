@@ -42,7 +42,7 @@ public class UserAddRequestHandlerUnitTest
 			.Received(1)
 			.AddAsync(
 			id: Arg.Is(id),
-			username: Arg.Is(request.Username.ToLower()),
+			username: Arg.Is(request.Username),
 			hashedPassword: Arg.Is(hashedPassword),
 			cancellationToken: Arg.Any<CancellationToken>());
 	}
