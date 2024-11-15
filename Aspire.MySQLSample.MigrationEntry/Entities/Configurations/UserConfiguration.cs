@@ -23,7 +23,7 @@ namespace Aspire.MySQLSample.MigrationEntry.Entities.Configurations
                 .HasMaxLength(16)
                 .HasComment("識別碼")
                 .HasColumnName("id")
-				.UseCollation("utf8mb4_general_ci");
+				.UseCollation("utf8mb4_0900_ai_ci");
 			entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasComment("創建時間")
@@ -32,8 +32,9 @@ namespace Aspire.MySQLSample.MigrationEntry.Entities.Configurations
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
                 .HasComment("密碼")
-                .HasColumnName("password");
-            entity.Property(e => e.State)
+                .HasColumnName("password")
+				.UseCollation("utf8mb4_bin");
+			entity.Property(e => e.State)
                 .HasComment("狀態")
                 .HasColumnName("state");
             entity.Property(e => e.UpdateAt)
@@ -45,7 +46,7 @@ namespace Aspire.MySQLSample.MigrationEntry.Entities.Configurations
                 .HasMaxLength(32)
                 .HasComment("用戶名")
                 .HasColumnName("username")
-				.UseCollation("utf8mb4_general_ci");
+				.UseCollation("utf8mb4_0900_ai_ci");
 
 			OnConfigurePartial(entity);
         }

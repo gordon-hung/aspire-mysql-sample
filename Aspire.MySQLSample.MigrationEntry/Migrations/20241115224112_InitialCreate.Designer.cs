@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aspire.MySQLSample.MigrationEntry.Migrations
 {
     [DbContext(typeof(MySqlContext))]
-    [Migration("20241115221955_InitialCreate")]
+    [Migration("20241115224112_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -34,7 +34,7 @@ namespace Aspire.MySQLSample.MigrationEntry.Migrations
                         .HasColumnType("varchar(16)")
                         .HasColumnName("id")
                         .HasComment("識別碼")
-                        .UseCollation("utf8mb4_general_ci");
+                        .UseCollation("utf8mb4_0900_ai_ci");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -48,7 +48,8 @@ namespace Aspire.MySQLSample.MigrationEntry.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)")
                         .HasColumnName("password")
-                        .HasComment("密碼");
+                        .HasComment("密碼")
+                        .UseCollation("utf8mb4_bin");
 
                     b.Property<int>("State")
                         .HasColumnType("int")
@@ -68,7 +69,7 @@ namespace Aspire.MySQLSample.MigrationEntry.Migrations
                         .HasColumnType("varchar(32)")
                         .HasColumnName("username")
                         .HasComment("用戶名")
-                        .UseCollation("utf8mb4_general_ci");
+                        .UseCollation("utf8mb4_0900_ai_ci");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
