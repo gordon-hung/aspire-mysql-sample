@@ -30,7 +30,8 @@ namespace Aspire.MySQLSample.MigrationEntry.Migrations
                         .HasMaxLength(16)
                         .HasColumnType("varchar(16)")
                         .HasColumnName("id")
-                        .HasComment("識別碼");
+                        .HasComment("識別碼")
+                        .UseCollation("utf8mb4_general_ci");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -63,7 +64,8 @@ namespace Aspire.MySQLSample.MigrationEntry.Migrations
                         .HasMaxLength(32)
                         .HasColumnType("varchar(32)")
                         .HasColumnName("username")
-                        .HasComment("用戶名");
+                        .HasComment("用戶名")
+                        .UseCollation("utf8mb4_general_ci");
 
                     b.HasKey("Id")
                         .HasName("PRIMARY");
